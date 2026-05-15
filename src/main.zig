@@ -30,4 +30,74 @@ pub fn main(init: std.process.Init) !void {
     const indigo2 = try hue.alloc.paint(arena, .indigo, "Hello in indigo!");
     const indigo3 = try hue.alloc.paint(arena, .indigo700, "Hello in indigo700!");
     std.debug.print("{s}\n{s}\n{s}\n", .{ indigo, indigo2, indigo3 });
+
+    const blue = try hue.alloc.paint(arena, .blue50, "Hello in blue50!");
+    const blue2 = try hue.alloc.paint(arena, .blue, "Hello in blue!");
+    const blue3 = try hue.alloc.paint(arena, .blue700, "Hello in blue700!");
+    std.debug.print("{s}\n{s}\n{s}\n", .{ blue, blue2, blue3 });
+
+    const lightBlue = try hue.alloc.paint(arena, .lightBlue50, "Hello in light blue50!");
+    const lightBlue2 = try hue.alloc.paint(arena, .lightBlue, "Hello in light blue!");
+    const lightBlue3 = try hue.alloc.paint(arena, .lightBlue700, "Hello in light blue700!");
+    std.debug.print("{s}\n{s}\n{s}\n", .{ lightBlue, lightBlue2, lightBlue3 });
+
+    const cyan = try hue.alloc.paint(arena, .cyan50, "Hello in cyan50!");
+    const cyan2 = try hue.alloc.paint(arena, .cyan, "Hello in cyan!");
+    const cyan3 = try hue.alloc.paint(arena, .cyan700, "Hello in cyan700!");
+    std.debug.print("{s}\n{s}\n{s}\n", .{ cyan, cyan2, cyan3 });
+
+    const teal = try hue.alloc.paint(arena, .teal50, "Hello in teal50!");
+    const teal2 = try hue.alloc.paint(arena, .teal, "Hello in teal!");
+    const teal3 = try hue.alloc.paint(arena, .teal700, "Hello in teal700!");
+    std.debug.print("{s}\n{s}\n{s}\n", .{ teal, teal2, teal3 });
+
+    const green = try hue.alloc.paint(arena, .green50, "Hello in green50!");
+    const green2 = try hue.alloc.paint(arena, .green, "Hello in green!");
+    const green3 = try hue.alloc.paint(arena, .green700, "Hello in green700!");
+    std.debug.print("{s}\n{s}\n{s}\n", .{ green, green2, green3 });
+
+    const lightGreen = try hue.alloc.paint(arena, .lightGreen50, "Hello in light green50!");
+    const lightGreen2 = try hue.alloc.paint(arena, .lightGreen, "Hello in light green!");
+    const lightGreen3 = try hue.alloc.paint(arena, .lightGreen700, "Hello in light green700!");
+    std.debug.print("{s}\n{s}\n{s}\n", .{ lightGreen, lightGreen2, lightGreen3 });
+
+    const lime = try hue.alloc.paint(arena, .lime50, "Hello in lime50!");
+    const lime2 = try hue.alloc.paint(arena, .lime, "Hello in lime!");
+    const lime3 = try hue.alloc.paint(arena, .lime700, "Hello in lime700!");
+    std.debug.print("{s}\n{s}\n{s}\n", .{ lime, lime2, lime3 });
+
+    const yellow = try hue.alloc.paint(arena, .yellow50, "Hello in yellow50!");
+    const yellow2 = try hue.alloc.paint(arena, .yellow, "Hello in yellow!");
+    const yellow3 = try hue.alloc.paint(arena, .yellow700, "Hello in yellow700!");
+    std.debug.print("{s}\n{s}\n{s}\n", .{ yellow, yellow2, yellow3 });
+
+    const amber = try hue.alloc.paint(arena, .amber50, "Hello in amber50!");
+    const amber2 = try hue.alloc.paint(arena, .amber, "Hello in amber!");
+    const amber3 = try hue.alloc.paint(arena, .amber700, "Hello in amber700!");
+    std.debug.print("{s}\n{s}\n{s}\n", .{ amber, amber2, amber3 });
+
+    const orange = try hue.alloc.paint(arena, .orange50, "Hello in orange50!");
+    const orange2 = try hue.alloc.paint(arena, .orange, "Hello in orange!");
+    const orange3 = try hue.alloc.paint(arena, .orange700, "Hello in orange700!");
+    std.debug.print("{s}\n{s}\n{s}\n", .{ orange, orange2, orange3 });
+
+    const deepOrange = try hue.alloc.paint(arena, .deepOrange50, "Hello in deep orange50!");
+    const deepOrange2 = try hue.alloc.paint(arena, .deepOrange, "Hello in deep orange!");
+    const deepOrange3 = try hue.alloc.paint(arena, .deepOrange700, "Hello in deep orange700!");
+    std.debug.print("{s}\n{s}\n{s}\n", .{ deepOrange, deepOrange2, deepOrange3 });
+
+    const brown = try hue.alloc.paint(arena, .brown50, "Hello in brown50!");
+    const brown2 = try hue.alloc.paint(arena, .brown, "Hello in brown!");
+    const brown3 = try hue.alloc.paint(arena, .brown700, "Hello in brown700!");
+    std.debug.print("{s}\n{s}\n{s}\n", .{ brown, brown2, brown3 });
+
+    const gray = try hue.alloc.paint(arena, .grey50, "Hello in gray50!");
+    const gray2 = try hue.alloc.paint(arena, .grey, "Hello in gray!");
+    const gray3 = try hue.alloc.paint(arena, .grey700, "Hello in gray700!");
+    std.debug.print("{s}\n{s}\n{s}\n", .{ gray, gray2, gray3 });
+
+    const blueGray = try hue.alloc.paint(arena, .blueGrey50, "Hello in blue gray50!");
+    const blueGray2 = try hue.alloc.paint(arena, .blueGrey, "Hello in blue gray!");
+    const blueGray3 = try hue.alloc.paint(arena, .blueGrey700, "Hello in blue gray700!");
+    std.debug.print("{s}\n{s}\n{s}\n", .{ blueGray, blueGray2, blueGray3 });
 }
