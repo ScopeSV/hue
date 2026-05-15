@@ -100,4 +100,30 @@ pub fn main(init: std.process.Init) !void {
     const blueGray2 = try hue.alloc.paint(arena, .blueGrey, "Hello in blue gray!");
     const blueGray3 = try hue.alloc.paint(arena, .blueGrey700, "Hello in blue gray700!");
     std.debug.print("{s}\n{s}\n{s}\n", .{ blueGray, blueGray2, blueGray3 });
+
+    std.debug.print("Done! Now writer\n", .{});
+
+    var buf: [1024]u8 = undefined;
+    var fileWriter = std.Io.File.stdout().writer(init.io, &buf);
+    var stdout = &fileWriter.interface;
+    try hue.writer.paint(stdout, .red, "Hello in red!");
+    try hue.writer.paint(stdout, .pink, "Hello in pink!");
+    try hue.writer.paint(stdout, .purple, "Hello in purple!");
+    try hue.writer.paint(stdout, .deepPurple, "Hello in deep purple!");
+    try hue.writer.paint(stdout, .indigo, "Hello in indigo!");
+    try hue.writer.paint(stdout, .blue, "Hello in blue!");
+    try hue.writer.paint(stdout, .lightBlue, "Hello in light blue!");
+    try hue.writer.paint(stdout, .cyan, "Hello in cyan!");
+    try hue.writer.paint(stdout, .teal, "Hello in teal!");
+    try hue.writer.paint(stdout, .green, "Hello in green!");
+    try hue.writer.paint(stdout, .lightGreen, "Hello in light green!");
+    try hue.writer.paint(stdout, .lime, "Hello in lime!");
+    try hue.writer.paint(stdout, .yellow, "Hello in yellow!");
+    try hue.writer.paint(stdout, .amber, "Hello in amber!");
+    try hue.writer.paint(stdout, .orange, "Hello in orange!");
+    try hue.writer.paint(stdout, .deepOrange, "Hello in deep orange!");
+    try hue.writer.paint(stdout, .brown, "Hello in brown!");
+    try hue.writer.paint(stdout, .grey, "Hello in gray!");
+
+    try stdout.flush();
 }
