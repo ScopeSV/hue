@@ -631,3 +631,5 @@ pub const Color = enum {
         };
     }
 };
+
+pub const fgDefault = "\x1b[39m";
