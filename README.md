@@ -1,16 +1,33 @@
 # hue
 
-Splash some color on your terminal. A Zig 0.16 library with the full [Material Design](https://m2.material.io/design/color/the-color-system.html) color palette for terminal output.
+Splash some color on your terminal. 
+Written in Zig 0.16
 
 ## Features
 
+### Coloring
 - Full Material Design color palette (19 color families, 14 shades each)
 - True color (24-bit RGB) output
 - Two APIs: allocating and writer-based
 - Type-safe color selection via enum with autocomplete
 - Zero runtime overhead — all color codes are comptime constants
 
+### Styles
+Format your text with ANSI styles
+* bold
+* italic
+* dim
+* underline
+* strike
+* reverse
+* blink
+* hidden
+* overline
+
+
 ## Usage
+
+## Colors
 
 ### Allocating API
 
@@ -58,6 +75,44 @@ Every color comes with shades from 50 (lightest) to 900 (darkest), plus accent v
 | brown | brown, brown50–brown900, brownA100–brownA700 |
 | grey | grey, grey50–grey900, greyA100–greyA700 |
 | blueGrey | blueGrey, blueGrey50–blueGrey900, blueGreyA100–blueGreyA700 |
+
+## Styles
+
+```zig
+const hue = @import("hue");
+const Style = hue.format.Style;
+
+// Basic wrap:
+try stdout.writeAll(Style.bold.on());
+try stdout.writeAll("important");
+try stdout.writeAll(Style.bold.off());
+
+// Comptime concat (zero runtime cost — bakes into one literal):
+try stdout.writeAll(comptime Style.dim.on() ++ "[hint]" ++ Style.dim.off());
+
+// Combining with colors:
+try stdout.writeAll(Style.bold.on());
+try hue.writer.paint(stdout, .red700, "FAIL");
+try stdout.writeAll(Style.bold.off());
+
+// Reset everything (color + style at once):
+try stdout.writeAll(comptime Style.underline.on() ++ hue.colors.Color.blue.code() ++ "link");
+try stdout.writeAll(hue.format.reset);
+```
+
+## Available Styles
+
+| Style | Effect |
+|-------|--------|
+| bold | thicker weight |
+| italic | slanted |
+| dim | reduced intensity |
+| underline | line below |
+| strike | line through |
+| reverse | swap foreground/background |
+| blink | slow blink (often disabled by terminal/user) |
+| hidden | invisible (passwords, spoilers) |
+| overline | line above (spotty terminal support) |
 
 ## Installation
 
